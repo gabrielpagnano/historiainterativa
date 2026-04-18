@@ -203,13 +203,13 @@ p {
     }
 
     .botao-escolha {
-        width: 20px !important;   
-        height: 20px !important;  
+        width: 30px !important;   
+        height: 30px !important;  
         padding: 0 !important;    
         display: flex !important; 
         justify-content: center;
         align-items: center;
-        font-size: 0.8rem;
+        font-size: 1.0rem;
         flex-shrink: 0;           
     }
 
