@@ -71,8 +71,9 @@ p {
 }
 
 .botao-escolha {
-    width: 60px;          /* Largura fixa */
-    height: 60px;         /* Altura fixa igual à largura */
+    width: 40px;       /* Diminuímos de 60 para 50 */
+    height: 40px;      /* Mantemos igual para continuar quadrado */
+    font-size: 1.0rem; /* Diminuímos a letra de 1.5 para 1.2 */
     display: inline-flex; /* Mantém o comportamento de alinhamento */
     justify-content: center;
     align-items: center;
@@ -202,13 +203,13 @@ p {
     }
 
     .botao-escolha {
-        width: 60px !important;   
-        height: 60px !important;  
+        width: 40px !important;   
+        height: 40px !important;  
         padding: 0 !important;    
         display: flex !important; 
         justify-content: center;
         align-items: center;
-        font-size: 1.5rem;
+        font-size: 1.0rem;
         flex-shrink: 0;           
     }
 
