@@ -200,16 +200,15 @@ p {
         margin-bottom: 35px;
         gap: 12px;
     }
-
-    .botao-escolha {
-        /* REMOVA o width: 100% daqui */
-        width: 60px;           /* Define uma largura fixa para voltar a ser quadrado */
-        height: 60px;          /* Define uma altura fixa igual à largura */
-        display: flex;
+        .botao-escolha {
+        width: 60px !important;   /* Força a largura */
+        height: 60px !important;  /* Força a altura */
+        padding: 0 !important;    /* Remove o padding de 10px 15px que está herdando */
+        display: flex !important; /* Garante o comportamento de caixa flexível */
         justify-content: center;
         align-items: center;
-        padding: 0;            /* Remove o padding para o tamanho fixo mandar */
         font-size: 1.5rem;
+        flex-shrink: 0;           /* Impede que o botão seja esmagado pelo texto */
     }
 
     .linha-opcao p {
