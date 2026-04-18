@@ -71,21 +71,21 @@ p {
 }
 
 .botao-escolha {
-    padding: 10px 15px;
+    width: 60px;          /* Largura fixa */
+    height: 60px;         /* Altura fixa igual à largura */
+    display: inline-flex; /* Mantém o comportamento de alinhamento */
+    justify-content: center;
+    align-items: center;
+    padding: 0;           /* Removemos o padding para não esticar o quadrado */
+    
     cursor: pointer;
     font-weight: bold;
-    border: 2px solid steelblue;
     background: lightcyan;
     color: steelblue;
-    /* 1. O segredo da profundidade: uma borda grossa na parte de baixo */
     border: none;
     border-radius: 8px;
- /* ... seus outros estilos ... */
     border-bottom: 6px solid #2e5a88;
-    transition: none; /* Botão de tecla deve ser instantâneo, sem delay */
-    display: inline-flex; 
-    align-items: center;
-    cursor: pointer;
+    transition: none;
 }
 
 .botao-escolha:hover {
@@ -193,12 +193,13 @@ p {
         font-size: 0.95rem; /* Fonte legível mas compacta para o mobile */
     }
 
-    .linha-opcao {
-        display: flex;
-        flex-direction: column; /* Mantém o empilhamento */
-        align-items: center;    /* Centraliza tudo no meio */
-        margin-bottom: 35px;
-        gap: 12px;
+        .linha-opcao {
+        flex-direction: column; /* No celular continua um embaixo do outro */
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
     }
         .botao-escolha {
         width: 60px !important;   /* Força a largura */
