@@ -193,23 +193,26 @@ p {
         font-size: 0.95rem; /* Fonte legível mas compacta para o mobile */
     }
 
+/* ... outros estilos que você já tem (h1, img, etc) ... */
+
     .linha-opcao {
-        flex-direction: column; /* No celular, o botão fica em cima e o texto embaixo */
-        gap: 8px;              /* Espaço entre o botão e o texto */
-        margin-bottom: 30px;    /* Aumenta o espaço entre a Opção A e a Opção B */
-        align-items: center;    /* Centraliza tanto o botão quanto o texto */
+        display: flex;
+        flex-direction: column; /* Isso faz o botão ficar em cima e o texto embaixo */
+        align-items: center;    /* Centraliza os dois no meio da tela */
+        text-align: center;     /* Garante que o texto da frase fique centralizado */
+        gap: 10px;              /* Espaço entre o botão e a frase */
+        margin-bottom: 30px;    /* Espaço entre a Opção A e a Opção B */
     }
 
     .botao-escolha {
-        width: 100%;           /* O botão fica largo e fácil de clicar no celular */
-        max-width: 250px;      /* Mas não deixamos ele ficar gigante pros lados */
-        padding: 12px;
-        justify-content: center;
+        /* Se quiser que o botão ocupe quase a largura toda do celular, use: */
+        width: 100%;
+        max-width: 200px; /* Mas limitamos para não ficar largo demais */
     }
 
     .linha-opcao p {
-        text-align: center;    /* Garante que a frase (ex: "um filme de terror") fique centralizada */
         margin: 0;
+        padding: 0 10px; /* Dá um respiro nas laterais do texto */
     }
 
 }
