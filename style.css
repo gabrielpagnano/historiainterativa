@@ -1,0 +1,162 @@
+* { margin: 0; 
+    padding-bottom: 0px; 
+    box-sizing: border-box;
+}
+
+body {
+padding: 2px;
+padding-bottom: 48px;
+}
+
+h1 {
+color:steelblue;
+font-family: 'Courier New', Courier, monospace;
+font-size: 50px;
+text-align: center;
+margin-top: 40px;
+margin-bottom: 10px;
+} 
+
+h2 {
+color: black;
+font-family: 'Courier New', Courier, monospace;
+font-size: 20px;
+text-align: center;
+margin-top: 20px;
+}
+
+img {
+    max-width: 55%; /* A imagem nunca será maior que a caixa dela */
+    height: auto;    /* Mantém a proporção para não achatar a imagem */
+    display: block;  /* Remove espaços extras indesejados abaixo da imagem */
+    margin: 20px auto; /* Centraliza e dá um espaço em cima e embaixo */
+}
+
+#container {
+    max-width: 800px;
+    margin: 0 auto; /* O 'auto' nas laterais centraliza o bloco horizontalmente */
+    display: flex;
+    flex-direction: column; /* Coloca um item embaixo do outro */
+    align-items: center;    /* Centraliza todos os itens (h1, texto, opções) */
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#texto {
+    text-align: left;   /* Isso joga o texto para a esquerda */
+    margin-top: 1px;   /* Um espaço entre o título e a premissa */
+    margin-bottom: 40px; 
+}
+
+#texto h2 {
+    text-align: left;   /* Garante que o h2 dentro da div também mude */
+    line-height: 1.4;   /* Melhora a leitura do texto */
+}
+
+/* Aqui acontece a mágica do alinhamento */
+.linha-opcao {
+    display: flex;         /* Coloca os itens lado a lado */
+    align-items: center;   /* Alinha verticalmente no centro */
+    margin-bottom: 20px;   /* Espaço entre a opção A e a B */
+    gap: 15px;            /* Espaço entre o botão e o texto */
+}
+
+.botao-escolha {
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 2px solid steelblue;
+    background: lightcyan;
+    color: steelblue;
+    /* 1. O segredo da profundidade: uma borda grossa na parte de baixo */
+    border: none;
+    border-radius: 8px;
+ /* ... seus outros estilos ... */
+    border-bottom: 6px solid #2e5a88;
+    transition: none; /* Botão de tecla deve ser instantâneo, sem delay */
+    display: inline-flex; 
+    align-items: center;
+    cursor: pointer;
+}
+
+.botao-escolha:hover {
+    background-color: lightpink;
+}
+
+/* 3. O efeito de "Afundar" ao clicar */
+.botao-escolha:active {
+/* Em vez de diminuir a borda, apenas descemos o botão */
+    transform: translateY(4px);
+    
+    /* Opcional: clareamos a sombra para dar efeito de pressão */
+    border-bottom-color: #3e79b5;
+}
+
+.divisor {
+    font-size: 0.9em;
+    color: steelblue; /* O azul que você já usa */
+    display: inline-block; /* Importante para animações funcionarem bem */
+    vertical-align: middle;
+    
+    /* Chamada da animação: nome | duração | modo | repetição */
+    animation: brilhoPulsante 2s ease-in-out infinite alternate;
+}
+
+/* O "roteiro" da animação */
+@keyframes brilhoPulsante {
+    from {
+        /* Brilho suave e mais próximo da runa */
+        text-shadow: 0 0 5px rgba(46, 90, 136, 0.4),
+                     0 0 10px rgba(46, 90, 136, 0.2);
+    }
+    to {
+        /* Brilho intenso, expandido e mais claro */
+        text-shadow: 0 0 15px rgba(100, 149, 237, 0.9), /* Um azul mais claro aqui */
+                     0 0 25px rgba(46, 90, 136, 0.6);
+    }
+}
+
+.botao-voltar {
+    display: inline-block;
+    color: #888; /* Cor cinza original */
+    text-decoration: none;
+    font-size: 2.1em;
+    font-weight: bold;
+    background: none;
+    border: none; /* Garante que não há borda */
+    padding: 8px 15px;
+    transition: color 0.2s ease, transform 0.1s ease; /* Transições suaves */
+    cursor: pointer;
+}
+
+/* Efeito ao passar o rato (Hover) */
+.botao-voltar:hover {
+    color: #2e5a88; /* Muda para o azul da tua identidade visual */
+}
+
+/* Efeito ao clicar (Active) - O "Afundar" */
+.botao-voltar:active {
+    color: steelblue; /* Um azul mais escuro para simular pressão */
+    transform: translateY(3px); /* Desloca a seta 3 pixéis para baixo */
+}
+
+#area-inicio {
+    text-align: center;
+    padding-bottom: 30px;
+    opacity: 0.6; /* Deixa um pouco mais discreto que o título */
+}
+
+.icone-nascimento {
+    font-size: 1.5em;
+    color: #2e5a88;
+    display: inline-block;
+    animation: batidaCoracao 3s infinite ease-in-out;
+}
+
+@keyframes batidaCoracao {
+    0% { transform: scale(1); filter: brightness(1); }
+    15% { transform: scale(1.2); filter: brightness(1.2); }
+    30% { transform: scale(1); filter: brightness(1); }
+    45% { transform: scale(1.15); filter: brightness(1.1); }
+    100% { transform: scale(1); filter: brightness(1); }
+}
