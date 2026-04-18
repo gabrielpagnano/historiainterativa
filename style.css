@@ -189,18 +189,27 @@ p {
         width: 90%; /* No celular, a imagem aproveita melhor a largura da tela */
     }
 
-    .linha-opcao {
-        gap: 10px; /* Diminui o espaço entre o botão A/B e o texto */
-    }
-
     p {
         font-size: 0.95rem; /* Fonte legível mas compacta para o mobile */
     }
 
-    /* Ajuste para o botão não sumir ou ficar estranho */
+    .linha-opcao {
+        flex-direction: column; /* No celular, o botão fica em cima e o texto embaixo */
+        gap: 8px;              /* Espaço entre o botão e o texto */
+        margin-bottom: 30px;    /* Aumenta o espaço entre a Opção A e a Opção B */
+        align-items: center;    /* Centraliza tanto o botão quanto o texto */
+    }
+
     .botao-escolha {
-        padding: 8px 12px;
-        min-width: 45px; /* Garante que o botão A/B mantenha um formato bom */
+        width: 100%;           /* O botão fica largo e fácil de clicar no celular */
+        max-width: 250px;      /* Mas não deixamos ele ficar gigante pros lados */
+        padding: 12px;
         justify-content: center;
     }
+
+    .linha-opcao p {
+        text-align: center;    /* Garante que a frase (ex: "um filme de terror") fique centralizada */
+        margin: 0;
+    }
+
 }
